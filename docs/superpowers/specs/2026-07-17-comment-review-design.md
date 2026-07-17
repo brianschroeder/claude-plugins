@@ -58,6 +58,10 @@ against an aggressive bar, reports them, and then offers to remove them.
 - References to issues, tickets, or external links that give context.
 - Public API documentation (docstrings on exported/public surfaces).
 - Legal / license / copyright headers.
+- Tooling directives and magic comments that affect compilation, linting,
+  typing, or build behavior — e.g. `# type: ignore`, `# noqa`,
+  `// @ts-expect-error`, `eslint-disable`, `//go:build`,
+  `# frozen_string_literal: true`. These are code, not commentary.
 
 ### Bar
 
