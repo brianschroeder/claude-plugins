@@ -21,15 +21,21 @@ hook — tell the user that when you confirm.
    target is `<home>/.claude/CLAUDE.md`. Do not target any project file.
 
 2. **Read the file if it exists.** Use the Read tool. If the file does not
-   exist, treat its content as empty (you will create it in step 4).
+   exist, treat its content as empty (you will create it in step 3).
 
 3. **Check for an existing managed block.** Search the content for the marker
    `<!-- TLDR:START -->`.
-   - If found: replace everything from `<!-- TLDR:START -->` through
-     `<!-- TLDR:END -->` (inclusive) with the current managed block below.
-     Use the Edit tool with the old block as `old_string`.
-   - If not found and the file has other content: append a blank line followed
-     by the managed block to the end of the file.
+   - If found: check whether `<!-- TLDR:END -->` is also present; if the END
+     marker is missing, treat the block as malformed and replace from START to
+     the end of the file. Then compare the block currently between the markers
+     to the managed block below — if they are already identical, make no change
+     (do not call Edit) and record the outcome as "already current". Otherwise,
+     replace everything from `<!-- TLDR:START -->` through `<!-- TLDR:END -->`
+     (inclusive) with the current managed block below using the Edit tool with
+     the old block as `old_string`.
+   - If not found and the file has other content: ensure the existing content
+     ends with a newline, then append a blank line followed by the managed
+     block to the end of the file.
    - If the file does not exist or is empty: create it with the managed block
      as its entire content (use the Write tool).
 
@@ -62,9 +68,10 @@ Rules:
 ```
 
 5. **Confirm to the user.** Report the exact path written and whether the block
-   was **created** (new file), **updated** (existing block replaced), or
-   **added** (appended to an existing file). Remind them it is a strong nudge,
-   not a hard guarantee, and that removing the block between the markers
+   was **created** (new file), **updated** (existing block replaced), **added**
+   (appended to an existing file), or **already current** (the block was
+   already present and identical — no change made). Remind them it is a strong
+   nudge, not a hard guarantee, and that removing the block between the markers
    disables it.
 
 ## Idempotency
