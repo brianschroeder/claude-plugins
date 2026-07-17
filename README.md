@@ -34,6 +34,12 @@ Once this marketplace lists plugins, install one with:
   `tldr-setup` skill once to install the instruction into your global
   `~/.claude/CLAUDE.md`.
 
+- **comment-review** — Reviews the comments your current branch added vs.
+  `main` and flags ones that don't earn their place (redundant, narration,
+  commented-out code, over-documented trivia, changelog noise), then offers to
+  remove them. Run its `comment-review` skill (`/comment-review`) on a branch
+  before opening a PR.
+
 See [CONTRIBUTING.md](./CONTRIBUTING.md) to add another.
 
 ## Managing the marketplace
