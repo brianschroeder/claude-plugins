@@ -21,21 +21,15 @@ website or hosting involved.
 
 ## Install a plugin
 
-```
-/plugin install hello-world@bschroeder-plugins
-```
-
-Then try it:
+Once this marketplace lists plugins, install one with:
 
 ```
-/hello
+/plugin install <plugin-name>@bschroeder-plugins
 ```
 
 ## Available plugins
 
-| Plugin | Description |
-| ------ | ----------- |
-| `hello-world` | Minimal example plugin that adds a `/hello` command. Use it as a template. |
+_None yet._ See [CONTRIBUTING.md](./CONTRIBUTING.md) to add one.
 
 ## Managing the marketplace
 
@@ -51,12 +45,7 @@ Then try it:
 claude-plugins/
 ├─ .claude-plugin/
 │  └─ marketplace.json     # the plugin index
-└─ plugins/
-   └─ hello-world/         # an example bundled plugin
-      ├─ .claude-plugin/
-      │  └─ plugin.json
-      └─ commands/
-         └─ hello.md
+└─ plugins/                # bundled plugins live here (one dir per plugin)
 ```
 
 ## Adding your own plugin

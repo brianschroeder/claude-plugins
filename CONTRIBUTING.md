@@ -5,7 +5,7 @@ in another repo** and merely referenced. Both work.
 
 ## Option A — bundle the plugin here
 
-1. Create the plugin directory under `plugins/`, mirroring `hello-world`:
+1. Create the plugin directory under `plugins/`, following this layout:
 
    ```
    plugins/my-plugin/

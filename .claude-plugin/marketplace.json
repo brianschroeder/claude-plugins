@@ -9,18 +9,5 @@
   "metadata": {
     "pluginRoot": "./plugins"
   },
-  "plugins": [
-    {
-      "name": "hello-world",
-      "source": "./hello-world",
-      "description": "A minimal example plugin that adds a /hello command. Use it as a template for new plugins.",
-      "version": "0.1.0",
-      "author": {
-        "name": "Brian Schroeder"
-      },
-      "license": "MIT",
-      "keywords": ["example", "template", "starter"],
-      "category": "example"
-    }
-  ]
+  "plugins": []
 }
