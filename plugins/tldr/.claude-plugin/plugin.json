@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "tldr",
+  "description": "Appends a standardized TLDR block (summary, key points, next steps, outstanding) to the end of every Claude response, via a one-time setup skill.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Brian Schroeder"
+  },
+  "license": "MIT",
+  "keywords": ["tldr", "summary", "output", "productivity"],
+  "category": "productivity"
+}

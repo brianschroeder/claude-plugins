@@ -29,7 +29,12 @@ Once this marketplace lists plugins, install one with:
 
 ## Available plugins
 
-_None yet._ See [CONTRIBUTING.md](./CONTRIBUTING.md) to add one.
+- **tldr** — Appends a standardized TLDR block (summary, key points, next
+  steps, outstanding) to the end of every Claude response. Run its
+  `tldr-setup` skill once to install the instruction into your global
+  `~/.claude/CLAUDE.md`.
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) to add another.
 
 ## Managing the marketplace
 
