@@ -19,6 +19,16 @@
       "license": "MIT",
       "keywords": ["tldr", "summary", "output", "productivity"],
       "category": "productivity"
+    },
+    {
+      "name": "comment-review",
+      "source": "./comment-review",
+      "description": "Reviews comments a branch added vs. main and flags ones that don't earn their place — redundant, narration, commented-out code, over-documented trivia, changelog noise — then offers to remove them.",
+      "version": "0.1.0",
+      "author": { "name": "Brian Schroeder" },
+      "license": "MIT",
+      "keywords": ["comments", "code-review", "cleanup", "readability"],
+      "category": "code-review"
     }
   ]
 }
