@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "bschroeder-plugins",
+  "description": "Brian Schroeder's personal marketplace of Claude Code plugins.",
+  "version": "0.1.0",
+  "owner": {
+    "name": "Brian Schroeder"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "hello-world",
+      "source": "./hello-world",
+      "description": "A minimal example plugin that adds a /hello command. Use it as a template for new plugins.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Brian Schroeder"
+      },
+      "license": "MIT",
+      "keywords": ["example", "template", "starter"],
+      "category": "example"
+    }
+  ]
+}
