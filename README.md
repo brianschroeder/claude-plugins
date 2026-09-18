@@ -40,6 +40,27 @@ Once this marketplace lists plugins, install one with:
   remove them. Run its `comment-review` skill (`/comment-review`) on a branch
   before opening a PR.
 
+### The repo-context family
+
+Three companion patterns, each maintained in its own repo and indexed here.
+They install a git-tracked file at a repo's root plus a matching block in
+`CLAUDE.md`/`AGENTS.md`, so the context survives fresh agent sessions. Each
+answers a different question, and they compose:
+
+| Plugin | Installs | Answers |
+|---|---|---|
+| [**simple-agent-memory**](https://github.com/brianschroeder/simple-agent-memory) | `agent-memory.md` | *What is true here?* — root causes, dead ends, conventions, quirks |
+| [**agent-references**](https://github.com/brianschroeder/agent-references) | `references.md` | *Where does the context live?* — a map of the surrounding material |
+| [**agent-methods**](https://github.com/brianschroeder/agent-methods) | `methods.md` | *How do I find out, right now?* — safe, repeatable procedures for fetching real-time answers |
+
+`agent-methods` is the newest of the three, and the direct counterpart to
+`simple-agent-memory`: memory stores a durable conclusion someone already
+worked out, methods store the procedure that gets *today's* answer. The split
+is conclusion vs. procedure. It matters because a fact about a live system
+expires, and a stale entry still gets read and trusted — so where the answer
+won't keep, the derivation is what gets recorded, behind an admission gate
+that keeps unsafe procedures from being written down and replayed unattended.
+
 See [CONTRIBUTING.md](./CONTRIBUTING.md) to add another.
 
 ## Managing the marketplace
@@ -58,6 +79,12 @@ claude-plugins/
 │  └─ marketplace.json     # the plugin index
 └─ plugins/                # bundled plugins live here (one dir per plugin)
 ```
+
+Plugins listed here are either **bundled** (a directory under `plugins/`, named
+by a bare `source` that resolves under `metadata.pluginRoot`) or **external** (a
+`source` object pointing at another GitHub repo). `pluginRoot` applies only to
+bare names — it is ignored for a `source` that already starts with `./`, and it
+does not apply to external sources at all.
 
 ## Adding your own plugin
 
