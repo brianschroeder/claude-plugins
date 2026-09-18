@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "bschroeder-plugins",
+  "description": "Brian Schroeder's personal marketplace of Claude Code plugins.",
+  "version": "0.1.0",
+  "owner": {
+    "name": "Brian Schroeder"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "tldr",
+      "source": "./tldr",
+      "description": "Appends a standardized TLDR block (summary, key points, next steps, outstanding) to the end of every Claude response, via a one-time setup skill.",
+      "version": "0.1.0",
+      "author": { "name": "Brian Schroeder" },
+      "license": "MIT",
+      "keywords": ["tldr", "summary", "output", "productivity"],
+      "category": "productivity"
+    },
+    {
+      "name": "comment-review",
+      "source": "./comment-review",
+      "description": "Reviews comments a branch added vs. main and flags ones that don't earn their place — redundant, narration, commented-out code, over-documented trivia, changelog noise — then offers to remove them.",
+      "version": "0.1.0",
+      "author": { "name": "Brian Schroeder" },
+      "license": "MIT",
+      "keywords": ["comments", "code-review", "cleanup", "readability"],
+      "category": "code-review"
+    }
+  ]
+}
