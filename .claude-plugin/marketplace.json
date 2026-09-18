@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "bschroeder-plugins",
   "description": "Brian Schroeder's personal marketplace of Claude Code plugins.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "owner": {
     "name": "Brian Schroeder"
   },
@@ -12,23 +12,99 @@
   "plugins": [
     {
       "name": "tldr",
-      "source": "./tldr",
+      "source": "tldr",
       "description": "Appends a standardized TLDR block (summary, key points, next steps, outstanding) to the end of every Claude response, via a one-time setup skill.",
       "version": "0.1.0",
-      "author": { "name": "Brian Schroeder" },
+      "author": {
+        "name": "Brian Schroeder"
+      },
       "license": "MIT",
-      "keywords": ["tldr", "summary", "output", "productivity"],
+      "keywords": [
+        "tldr",
+        "summary",
+        "output",
+        "productivity"
+      ],
       "category": "productivity"
     },
     {
       "name": "comment-review",
-      "source": "./comment-review",
+      "source": "comment-review",
       "description": "Reviews comments a branch added vs. main and flags ones that don't earn their place — redundant, narration, commented-out code, over-documented trivia, changelog noise — then offers to remove them.",
       "version": "0.1.0",
-      "author": { "name": "Brian Schroeder" },
+      "author": {
+        "name": "Brian Schroeder"
+      },
       "license": "MIT",
-      "keywords": ["comments", "code-review", "cleanup", "readability"],
+      "keywords": [
+        "comments",
+        "code-review",
+        "cleanup",
+        "readability"
+      ],
       "category": "code-review"
+    },
+    {
+      "name": "simple-agent-memory",
+      "source": {
+        "source": "github",
+        "repo": "brianschroeder/simple-agent-memory"
+      },
+      "description": "Repo-level agent memory: a git-tracked learnings log agents read when stuck and append to as they work. Answers \"what is true here?\"",
+      "author": {
+        "name": "Brian Schroeder"
+      },
+      "license": "MIT",
+      "homepage": "https://github.com/brianschroeder/simple-agent-memory",
+      "keywords": [
+        "agent",
+        "memory",
+        "learnings",
+        "context"
+      ],
+      "category": "context"
+    },
+    {
+      "name": "agent-references",
+      "source": {
+        "source": "github",
+        "repo": "brianschroeder/agent-references"
+      },
+      "description": "Repo-level references index: a git-tracked map of where the surrounding context lives, that agents read before going looking and fix as they go. Answers \"where does the context live?\"",
+      "author": {
+        "name": "Brian Schroeder"
+      },
+      "license": "MIT",
+      "homepage": "https://github.com/brianschroeder/agent-references",
+      "keywords": [
+        "agent",
+        "references",
+        "context",
+        "documentation",
+        "index"
+      ],
+      "category": "context"
+    },
+    {
+      "name": "agent-methods",
+      "source": {
+        "source": "github",
+        "repo": "brianschroeder/agent-methods"
+      },
+      "description": "Repo-level methods, the counterpart to agent memory: where memory stores durable learnings, methods store safe, repeatable procedures for fetching real-time answers and other useful information. Answers \"how do I find out, right now?\"",
+      "author": {
+        "name": "Brian Schroeder"
+      },
+      "license": "MIT",
+      "homepage": "https://github.com/brianschroeder/agent-methods",
+      "keywords": [
+        "agent",
+        "methods",
+        "procedures",
+        "runbook",
+        "context"
+      ],
+      "category": "context"
     }
   ]
 }
