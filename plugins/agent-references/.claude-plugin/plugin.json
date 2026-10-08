@@ -1,0 +1,20 @@
+{
+  "name": "agent-references",
+  "version": "0.1.0",
+  "description": "Repo-level references index for Claude Code: a git-tracked map of where the surrounding context lives, that agents read before going looking and fix as they go.",
+  "author": {
+    "name": "Brian Schroeder",
+    "url": "https://github.com/brianschroeder"
+  },
+  "homepage": "https://github.com/brianschroeder/claude-plugins/tree/main/plugins/agent-references",
+  "repository": "https://github.com/brianschroeder/claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "agent",
+    "references",
+    "context",
+    "documentation",
+    "index"
+  ]
+}
