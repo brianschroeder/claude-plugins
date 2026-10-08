@@ -40,13 +40,13 @@ Once this marketplace lists plugins, install one with:
   remove them. Run its `comment-review` skill (`/comment-review`) on a branch
   before opening a PR.
 
-- **legible**: Near-STE writing, after a
-  [post by Andrej Karpathy](https://x.com/karpathy/status/2105819303471976479). Its
-  `legible:legible` output style keeps your chat replies to about 80% of ASD-STE100 Simplified
-  Technical English and escalates to a diagram or an HTML page only when prose is the wrong
-  format. Its `legible-setup` skill puts the same standard into a repo's `CLAUDE.md` and
-  `AGENTS.md`, so every agent that writes runbooks, setup guides and READMEs there follows it.
-  See [plugins/legible](./plugins/legible/README.md).
+- **legible**: A documentation standard based on about 80% of ASD-STE100 Simplified
+  Technical English, after a
+  [post by Andrej Karpathy](https://x.com/karpathy/status/2105819303471976479). Run its
+  `legible-setup` skill in a repo to add the standard to `CLAUDE.md` and `AGENTS.md`. Every
+  agent that writes runbooks, setup guides and READMEs there then follows it. An optional
+  `legible:legible` output style applies the same sentence rules to your chat replies. See
+  [plugins/legible](./plugins/legible/README.md).
 
 ### The repo-context family
 

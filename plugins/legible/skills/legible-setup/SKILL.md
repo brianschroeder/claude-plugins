@@ -1,28 +1,30 @@
 ---
 name: legible-setup
 description: >-
-  Install the near-STE writing standard into a repository: a marker-wrapped block in both
-  `CLAUDE.md` and `AGENTS.md`, so every agent that writes docs in the repo (Claude Code,
-  Cursor, Codex, Aider and other AGENTS.md readers) follows about 80% of ASD-STE100 Simplified
-  Technical English. Use this whenever the user wants to add, set up, install, update, repair
-  or remove the "legible" block, a writing standard, Simplified Technical English, STE or
-  ASD-STE100 rules, or wants a repo's runbooks, setup guides and READMEs to read more clearly
-  and consistently, even if they do not say "skill".
+  Install a documentation standard into a repository: a marker-wrapped block in both
+  `CLAUDE.md` and `AGENTS.md` that sets how the repo's docs are written. Sentences follow about
+  80% of ASD-STE100 Simplified Technical English, and procedures follow a fixed layout
+  (purpose, prerequisites, numbered steps, warnings first, expected results, verify and undo).
+  Every agent that writes docs in the repo (Claude Code, Cursor, Codex, Aider and other
+  AGENTS.md readers) follows it. Use this whenever the user wants to add, set up, install,
+  update, repair or remove the "legible" block, a documentation or docs writing standard, a
+  runbook or setup guide style, Simplified Technical English, STE or ASD-STE100 rules, or wants
+  a repo's docs to read more clearly and consistently across teams, even if they do not say
+  "skill".
 ---
 
-# Legible setup (repo-level)
+# Legible setup (repo-level docs standard)
 
-This skill installs a git-tracked writing standard into a repository, the same way
+This skill installs a git-tracked documentation standard into a repository, the same way
 `simple-agent-memory` installs a learnings log. The standard lives in a marker-wrapped block
 in the repo's `CLAUDE.md` and `AGENTS.md`. Both files load at the start of every agent
-session, so the rules apply without anyone asking for them.
+session, so any agent that writes or edits a doc there follows the standard without being
+asked.
 
-Two layers, and they do different jobs:
-
-- **The `legible:legible` output style** is personal. It shapes one person's chat replies, in
-  every repo.
-- **This block** belongs to the repo. It shapes the docs that anyone's agent writes there, and
-  it is reviewed and versioned with the code.
+The block covers documentation only: READMEs, runbooks, setup guides, how-to guides and
+`docs/`. It does not change how agents reply in chat, write code, or word commits and PRs.
+The plugin's `legible:legible` output style is a separate, personal setting for chat replies,
+and this skill does not depend on it.
 
 The rules sit in the block itself rather than in a separate file. A writing standard only
 works if it is in context at the moment of writing, so on-demand reading does not fit here.
