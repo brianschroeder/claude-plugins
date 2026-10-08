@@ -24,6 +24,14 @@ plugins from it. No website or hosting is involved.
 
 ## Available plugins
 
+- **legible**: A documentation standard based on about 80% of ASD-STE100 Simplified
+  Technical English, after a
+  [post by Andrej Karpathy](https://x.com/karpathy/status/2105819303471976479). Run its
+  `legible-setup` skill in a repo to add the standard to `CLAUDE.md` and `AGENTS.md`. Every
+  agent that writes runbooks, setup guides and READMEs there then follows it. An optional
+  `legible:legible` output style applies the same sentence rules to your chat replies. See
+  [plugins/legible](./plugins/legible/README.md).
+
 ### The repo-context family
 
 Three companion patterns. Each one installs a git-tracked file at a repo's root plus a matching
