@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "bschroeder-plugins",
   "description": "Brian Schroeder's personal marketplace of Claude Code plugins.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "owner": {
     "name": "Brian Schroeder"
   },
@@ -43,6 +43,25 @@
         "readability"
       ],
       "category": "code-review"
+    },
+    {
+      "name": "legible",
+      "source": "legible",
+      "description": "Near-STE writing: an output style that keeps chat replies to about 80% of ASD-STE100 Simplified Technical English, plus a setup skill that installs the same standard into a repo's CLAUDE.md and AGENTS.md for its docs.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Brian Schroeder"
+      },
+      "license": "MIT",
+      "keywords": [
+        "writing",
+        "ste",
+        "asd-ste100",
+        "readability",
+        "output-style",
+        "docs"
+      ],
+      "category": "productivity"
     },
     {
       "name": "simple-agent-memory",

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "legible",
+  "description": "Near-STE writing: an output style that keeps chat replies to about 80% of ASD-STE100 Simplified Technical English and escalates to a diagram or HTML page only when prose is the wrong format, plus a setup skill that installs the same standard into a repo's CLAUDE.md and AGENTS.md for its docs.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Brian Schroeder"
+  },
+  "license": "MIT",
+  "keywords": [
+    "writing",
+    "ste",
+    "asd-ste100",
+    "readability",
+    "output-style",
+    "docs"
+  ]
+}
