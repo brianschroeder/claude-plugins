@@ -1,0 +1,20 @@
+{
+  "name": "agent-methods",
+  "version": "0.1.0",
+  "description": "Repo-level methods for Claude Code, the counterpart to agent memory: where memory stores durable learnings, methods store safe, repeatable procedures for fetching real-time answers and other useful information.",
+  "author": {
+    "name": "Brian Schroeder",
+    "url": "https://github.com/brianschroeder"
+  },
+  "homepage": "https://github.com/brianschroeder/claude-plugins/tree/main/plugins/agent-methods",
+  "repository": "https://github.com/brianschroeder/claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "agent",
+    "methods",
+    "procedures",
+    "runbook",
+    "context"
+  ]
+}

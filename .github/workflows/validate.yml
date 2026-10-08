@@ -1,0 +1,89 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate manifests are valid JSON and every bundled source exists
+        run: |
+          python3 - <<'EOF'
+          import json, os, sys
+          m = json.load(open('.claude-plugin/marketplace.json'))
+          root = m.get('metadata', {}).get('pluginRoot', '.')
+          bad = []
+          for p in m['plugins']:
+              src = p['source']
+              if not isinstance(src, str):
+                  continue
+              path = src if src.startswith('./') else os.path.join(root, src)
+              manifest = os.path.join(path, '.claude-plugin', 'plugin.json')
+              if not os.path.isfile(manifest):
+                  bad.append(f"{p['name']}: {manifest} not found")
+                  continue
+              if json.load(open(manifest)).get('name') != p['name']:
+                  bad.append(f"{p['name']}: plugin.json name does not match the marketplace entry")
+          if bad:
+              print('\n'.join(bad))
+              sys.exit(1)
+          EOF
+
+      - name: Validate SKILL.md frontmatter
+        run: |
+          set -e
+          for FILE in plugins/*/skills/*/SKILL.md; do
+            head -1 "$FILE" | grep -q '^---$'
+            grep -q '^name:' "$FILE"
+            grep -q '^description:' "$FILE"
+          done
+
+      - name: Validate the repo-context family assets are present
+        run: |
+          set -e
+          check() {
+            DIR=$1; MARKER=$2; TEMPLATE=$3
+            test -f "$DIR/assets/$TEMPLATE"
+            test -f "$DIR/assets/claude-md-block.md"
+            grep -q "<!-- $MARKER:start -->" "$DIR/assets/claude-md-block.md"
+            grep -q "<!-- $MARKER:end -->" "$DIR/assets/claude-md-block.md"
+          }
+          check plugins/simple-agent-memory/skills/agent-memory agent-memory agent-memory.template.md
+          check plugins/agent-references/skills/references references references.template.md
+          check plugins/agent-methods/skills/methods methods methods.template.md
+
+      - name: Validate the agent-methods safety gate is present in every place it must be
+        run: |
+          set -e
+          # The gate is load-bearing: it must appear in the always-loaded CLAUDE.md block,
+          # in the template that lands in repos, and in the skill itself. Losing it from
+          # any one of the three silently removes the guardrail for that reading path.
+          D=plugins/agent-methods
+          for FILE in $D/skills/methods/SKILL.md \
+                      $D/skills/methods/assets/methods.template.md \
+                      $D/skills/methods/assets/claude-md-block.md; do
+            grep -qi 'read-only' "$FILE"
+            grep -qi 'least privilege' "$FILE"
+            grep -qi 'never record' "$FILE"
+            grep -q 'none safe yet' "$FILE"
+          done
+
+      - name: Validate the agent-methods routing framing is present wherever an entry gets written
+        run: |
+          set -e
+          # Losing this is how methods.md quietly turns into a second copy of
+          # agent-memory.md: without the conclusion-vs-procedure split stated where the
+          # entry is written, durable facts get filed here and go stale unread.
+          D=plugins/agent-methods
+          for FILE in $D/skills/methods/SKILL.md \
+                      $D/skills/methods/assets/methods.template.md \
+                      $D/skills/methods/assets/claude-md-block.md \
+                      $D/README.md; do
+            grep -qi 'counterpart' "$FILE"
+            grep -qi 'conclusion vs. procedure' "$FILE"
+            grep -qi 'wrong in a month' "$FILE"
+          done

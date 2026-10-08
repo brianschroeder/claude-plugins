@@ -29,7 +29,7 @@ in another repo** and merely referenced. Both work.
    ```json
    {
      "name": "my-plugin",
-     "source": "./my-plugin",
+     "source": "my-plugin",
      "description": "What it does.",
      "version": "0.1.0",
      "author": { "name": "Brian Schroeder" },
