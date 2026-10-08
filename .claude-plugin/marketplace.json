@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "bschroeder-plugins",
   "description": "Brian Schroeder's personal marketplace of Claude Code plugins.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "owner": {
     "name": "Brian Schroeder"
   },
@@ -43,6 +43,26 @@
         "readability"
       ],
       "category": "code-review"
+    },
+    {
+      "name": "legible",
+      "source": "legible",
+      "description": "A documentation standard for repos: a setup skill that adds about 80% of ASD-STE100 Simplified Technical English, plus a fixed layout for runbooks and setup guides, to a repo's CLAUDE.md and AGENTS.md so every agent that writes its docs follows it. Ships an optional output style that applies the same sentence rules to chat replies.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Brian Schroeder"
+      },
+      "license": "MIT",
+      "keywords": [
+        "documentation",
+        "docs",
+        "runbooks",
+        "writing",
+        "ste",
+        "asd-ste100",
+        "readability"
+      ],
+      "category": "documentation"
     },
     {
       "name": "simple-agent-memory",
