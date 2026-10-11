@@ -41,7 +41,7 @@ the accumulated content, read on demand.
 The two files are a pair, and the split between them is **conclusion vs.
 procedure** — not durable vs. volatile:
 
-| | [`agent-memory.md`](../simple-agent-memory/) | `methods.md` |
+| | [`MEMORY.md`](../simple-agent-memory/) | `methods.md` |
 |---|---|---|
 | Stores | **durable learnings** — a conclusion you read and act on | **procedures** — something you run to get a current answer |
 | Holds | root causes, dead ends, conventions, quirks | real-time lookups, live state, reusable how-tos |
@@ -132,7 +132,7 @@ Three files, three questions:
 
 | Pattern | File | Answers |
 |---|---|---|
-| [simple-agent-memory](../simple-agent-memory/) | `agent-memory.md` | *What is true here?* |
+| [simple-agent-memory](../simple-agent-memory/) | `MEMORY.md` | *What is true here?* |
 | [agent-references](../agent-references/) | `references.md` | *Where does the context live?* |
 | **agent-methods** (this plugin) | `methods.md` | *How do I find out, right now?* |
 

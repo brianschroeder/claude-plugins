@@ -26,7 +26,7 @@ tries to be both becomes neither:
 
 - **`references.md` is about location.** *Where* is the thing? Stable, mostly additive, and
   answers "where do I look?"
-- **`agent-memory.md` is about lessons.** *What did we learn the hard way?* Dated, newest-first,
+- **`MEMORY.md` is about lessons.** *What did we learn the hard way?* Dated, newest-first,
   and answers "why did this bite me?"
 
 A path belongs in references. A root cause belongs in memory. When an entry wants to be both —

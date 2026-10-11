@@ -1,6 +1,6 @@
 {
   "name": "agent-references",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Repo-level references index for Claude Code: a git-tracked map of where the surrounding context lives, that agents read before going looking and fix as they go.",
   "author": {
     "name": "Brian Schroeder",

@@ -52,7 +52,7 @@ jobs:
             grep -q "<!-- $MARKER:start -->" "$DIR/assets/claude-md-block.md"
             grep -q "<!-- $MARKER:end -->" "$DIR/assets/claude-md-block.md"
           }
-          check plugins/simple-agent-memory/skills/agent-memory agent-memory agent-memory.template.md
+          check plugins/simple-agent-memory/skills/agent-memory agent-memory MEMORY.template.md
           check plugins/agent-references/skills/references references references.template.md
           check plugins/agent-methods/skills/methods methods methods.template.md
 

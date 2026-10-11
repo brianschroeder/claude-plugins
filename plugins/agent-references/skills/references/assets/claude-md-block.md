@@ -27,7 +27,7 @@ docs, dashboards, runbooks, tickets, and vendor documentation.
   someone's afternoon.
 
 > Keep location and lessons separate. `references.md` answers *where is it?*; a learnings log
-> like `agent-memory.md` answers *what did we learn the hard way?* When something is both, put
+> like `MEMORY.md` answers *what did we learn the hard way?* When something is both, put
 > the pointer here with a one-line warning and the full story there.
 
 > Read the file on demand (as above) rather than importing it with `@references.md`: imported

@@ -32,7 +32,7 @@ holds the accumulated content, read on demand.
 
 These two are a pair, and the pairing is the point:
 
-| | `agent-memory.md` | `methods.md` |
+| | `MEMORY.md` | `methods.md` |
 |---|---|---|
 | Stores | **durable learnings** — a conclusion you read and act on | **procedures** — something you run to get a current answer |
 | Holds | root causes, dead ends, conventions, quirks | real-time lookups, live state, reusable how-tos |
@@ -50,7 +50,7 @@ session reads the stale fact and trusts it. Which version is running, who curren
 an approval, what the live quota is, what exists in the account right now: written down as
 facts these become confident wrong answers, and written down as methods they stay correct.
 
-If **no**, it is a durable learning and `agent-memory.md` is usually the right home — but
+If **no**, it is a durable learning and `MEMORY.md` is usually the right home — but
 not always, which is what the second question is for:
 
 > **Is the procedure itself the valuable part, and did working it out take real effort?**
@@ -62,7 +62,7 @@ invocation is non-obvious, where the answer needs cross-referencing several plac
 where getting it wrong is expensive.
 
 **When both files could hold it, split it rather than choosing.** Put the durable
-conclusion in `agent-memory.md`, the procedure here, and cross-link the two. Do not copy
+conclusion in `MEMORY.md`, the procedure here, and cross-link the two. Do not copy
 the conclusion into this file — that is precisely the staleness this file exists to
 prevent.
 
@@ -159,7 +159,7 @@ This is the common case after setup, and it is worth doing deliberately:
 3. **Write it while it is fresh**, in the entry format at the top of `methods.template.md`,
    newest at the top.
 4. **Confirm the volatility test still applies.** If the answer turns out to be durable
-   after all, it belongs in `agent-memory.md`, not here.
+   after all, it belongs in `MEMORY.md`, not here.
 
 ## Customization notes
 
