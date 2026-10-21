@@ -26,8 +26,8 @@ tries to be both becomes neither:
 
 - **`references.md` is about location.** *Where* is the thing? Stable, mostly additive, and
   answers "where do I look?"
-- **`agent-memory.md` is about lessons.** *What did we learn the hard way?* Dated, newest-first,
-  and answers "why did this bite me?"
+- **`agent-memory/` is about lessons.** *What did we learn the hard way?* One dated, tagged
+  concept per lesson, and answers "why did this bite me?"
 
 A path belongs in references. A root cause belongs in memory. When an entry wants to be both —
 "the pipeline IAM lives here, **and** the state prefix it sets will silently break your backend

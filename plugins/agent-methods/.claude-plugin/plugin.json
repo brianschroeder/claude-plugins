@@ -1,6 +1,6 @@
 {
   "name": "agent-methods",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Repo-level methods for Claude Code, the counterpart to agent memory: where memory stores durable learnings, methods store safe, repeatable procedures for fetching real-time answers and other useful information.",
   "author": {
     "name": "Brian Schroeder",
