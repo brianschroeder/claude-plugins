@@ -34,13 +34,13 @@ plugins from it. No website or hosting is involved.
 
 ### The repo-context family
 
-Three companion patterns. Each one installs a git-tracked file at a repo's root plus a matching
+Three companion patterns. Each one installs git-tracked context at a repo's root plus a matching
 block in `CLAUDE.md`/`AGENTS.md`, so the context survives fresh agent sessions. Each answers a
 different question, and they compose:
 
 | Plugin | Installs | Answers |
 |---|---|---|
-| [**simple-agent-memory**](./plugins/simple-agent-memory/) | `MEMORY.md` | *What is true here?* Root causes, dead ends, conventions, quirks. |
+| [**simple-agent-memory**](./plugins/simple-agent-memory/) | `agent-memory/` ([OKF](https://github.com/GoogleCloudPlatform/open-knowledge-format) bundle) | *What is true here?* Root causes, dead ends, conventions, quirks. |
 | [**agent-references**](./plugins/agent-references/) | `references.md` | *Where does the context live?* A map of the surrounding material. |
 | [**agent-methods**](./plugins/agent-methods/) | `methods.md` | *How do I find out, right now?* Safe, repeatable procedures for fetching real-time answers. |
 

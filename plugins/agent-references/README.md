@@ -114,7 +114,7 @@ both becomes neither:
 | | Answers | Shape |
 |---|---|---|
 | `references.md` | *Where is it?* | Stable, mostly additive, grouped by question |
-| `MEMORY.md` | *What did we learn the hard way?* | Dated, newest-first, grouped by incident |
+| `agent-memory/` | *What did we learn the hard way?* | One dated, tagged concept per lesson |
 
 A path belongs in references. A root cause belongs in memory. When something is both, put the
 pointer in references with a one-line warning and the full story in memory.

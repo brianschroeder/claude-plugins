@@ -26,8 +26,8 @@ docs, dashboards, runbooks, tickets, and vendor documentation.
   guessed URL: an admitted gap is better than a link that will be trusted once and waste
   someone's afternoon.
 
-> Keep location and lessons separate. `references.md` answers *where is it?*; a learnings log
-> like `MEMORY.md` answers *what did we learn the hard way?* When something is both, put
+> Keep location and lessons separate. `references.md` answers *where is it?*; a learnings store
+> like `agent-memory/` answers *what did we learn the hard way?* When something is both, put
 > the pointer here with a one-line warning and the full story there.
 
 > Read the file on demand (as above) rather than importing it with `@references.md`: imported
